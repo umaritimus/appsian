@@ -1,0 +1,38 @@
+{
+  "name": "umaritimus-appsian",
+  "version": "0.1.0",
+  "author": "umaritimus",
+  "summary": "Puppet module for Appsian ERP Firewall implementation",
+  "license": "MIT",
+  "source": "https://github.com/umaritimus/appsian",
+  "project_page": "https://github.com/umaritimus/appsian",
+  "issues_url": "https://github.com/umaritimus/appsian",
+  "dependencies": [
+    {
+      "name": "puppetlabs/powershell",
+      "version_requirement": ">= 3.0.0 < 3.1.0"
+    },
+    {
+      "name": "puppetlabs/pwshlib",
+      "version_requirement": ">= 0.4.0 < 1.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "windows",
+      "operatingsystemrelease": [
+        "2019",
+        "10"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.15.0",
+  "template-url": "pdk-default#1.15.0",
+  "template-ref": "tags/1.15.0-0-g0bc522e"
+}

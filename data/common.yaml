@@ -1,0 +1,4 @@
+---
+appsian::asp::ensure:         'present'
+appsian::asp::package:        '//share/ERP_Firewall_Package_202.zip'
+appsian::asp::config::status: 'active'
