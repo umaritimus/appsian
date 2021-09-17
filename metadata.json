@@ -1,6 +1,6 @@
 {
   "name": "umaritimus-appsian",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "umaritimus",
   "summary": "Puppet module for Appsian ERP Firewall implementation",
   "license": "MIT",
