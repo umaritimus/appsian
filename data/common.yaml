@@ -1,4 +1,6 @@
 ---
 appsian::asp::ensure:         'present'
-appsian::asp::package:        '//share/ERP_Firewall_Package_202.zip'
+appsian::asp::package:        '//share/ASP_Package_50_21E57_30246.zip'
 appsian::asp::config::status: 'active'
+
+asp_jdk_location: 'path_to_jdk_1.8_as_a_temporary_workaround_for_pt859_asp_web_issue'

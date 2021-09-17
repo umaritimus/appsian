@@ -8,7 +8,7 @@ class appsian::asp::install (
   String $domain = lookup('pia_domain_name'),
   String $ps_config_home = lookup('ps_config_home'),
   String $ps_home = lookup('ps_home_location'),
-  String $java_home = lookup('jdk_location'),
+  String $java_home = lookup('asp_jdk_location'),
   Optional[Variant[Enum['present', 'absent'], String[1]]] $ensure = $appsian::asp::ensure,
   Optional[String[1]] $package = $appsian::asp::package
 ) {
@@ -30,7 +30,7 @@ class appsian::asp::install (
     exec { 'Deploy Application server ASP components' :
       command   => Sensitive("
         Get-Service PsftApp* | Stop-Service -Force | Out-Null;
-        & \"${temp}/ERP_Firewall/AppServer/Windows/setup.exe\" `
+        & \"${temp}/ASP/AppServer/Windows/asp_app.exe\" `
           /log=\"${temp}/appserver-installation.log\" `
           /verysilent `
           /suppressmsgboxes `
@@ -76,7 +76,7 @@ class appsian::asp::install (
             -Force
         }
                   
-        & \"${temp}/ERP_Firewall/WebServer/Windows/gh_firewall_web.exe\" `
+        & \"${temp}/ASP/WebServer/Windows/asp_web.exe\" `
           /log=\"${temp}/webserver-installation.log\" `
           /verysilent `
           /suppressmsgboxes `
